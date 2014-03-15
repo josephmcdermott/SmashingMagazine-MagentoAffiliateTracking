@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <checkout_onepage_success>
+        <reference name="before_body_end">
+            <block type="smashingmagazine_affiliate/conversion" name="smashingmagazine_affiliate_conversion" template="smashingmagazine_affiliate/conversion.phtml" />
+        </reference>
+    </checkout_onepage_success>
+</layout>

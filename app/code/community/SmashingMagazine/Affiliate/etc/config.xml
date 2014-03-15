@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <SmashingMagazine_Affiliate>
+            <version>0.0.1</version>
+        </SmashingMagazine_Affiliate>
+    </modules>
+    <global>
+        <blocks>
+            <smashingmagazine_affiliate>
+                <class>SmashingMagazine_Affiliate_Block</class>
+            </smashingmagazine_affiliate>
+        </blocks>
+        <models>
+            <smashingmagazine_affiliate>
+                <class>SmashingMagazine_Affiliate_Model</class>
+            </smashingmagazine_affiliate>
+        </models>
+        <events>
+            <controller_front_init_before>
+                <observers>
+                    <smashingmagazine_affiliate>
+                        <class>smashingmagazine_affiliate/observer</class>
+                        <method>captureReferral</method>
+                        <type>singleton</type>
+                    </smashingmagazine_affiliate >
+                </observers>
+            </controller_front_init_before>
+        </events>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <smashingmagazine_affiliate module="SmashingMagazine_Affiliate">
+                    <file>smashingmagazine_affiliate.xml</file>
+                </smashingmagazine_affiliate>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <ampersand_smashingmagazine>
+            <cookie>
+                <timeout>30</timeout>
+            </cookie>
+        </ampersand_smashingmagazine>
+    </default>
+</config>
